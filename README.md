@@ -160,14 +160,13 @@ findRotationCount([5, 1, 2, 3, 4]) // 1
 function findFloor(arr, val) {
     let left = 0;
     let right = arr.length - 1;
-    if (val < arr[left])
+    if (val < arr[left] || right == -1)
         return -1;
     while (left <= right) {        
         let mid = left + Math.floor((right - left) / 2);
         //console.log("new mid " + mid + " arr[mid] is " + arr[mid]);
-        if (arr[mid] == val && arr[mid+1] > val) {
-            return arr[mid];
-        } else if (arr[mid] < val && arr[mid + 1] > val) {
+        if(arr[mid] <= val && 
+            (mid === arr.length - 1 || arr[mid + 1] > val)) {
             //console.log(arr[mid] + " > " + val + " > " + arr[mid - 1]);
             return arr[mid];
         } else if (arr[mid] > val) {
