@@ -1,7 +1,7 @@
 # Problem Solving - Divide and Conquer
 ### Binary Search Algorithms
 + Additional Test Cases added
-+ TODO: findRotatedIndex 2*O(log*n) implementation
++ TODO: findRotatedIndex 2O(log*n) implementation
 ---
 ### countZeroes
 ```javascript
